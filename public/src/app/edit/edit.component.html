@@ -1,0 +1,14 @@
+<div id="component">
+    <a [routerLink]="['/home']"><h2>Home</h2></a>
+    <h2>Edit this author:</h2>
+    <form (submit)="editSubmit()">
+      <h3>Name:</h3>
+      <input type="text" name="editName.name" [(ngModel)]="editName.name" [value]="author.author.name">
+      <br>
+      <button class="btn btn-primary" [routerLink]="['/home']">Cancel</button>
+      <input class="btn btn-success" type="submit" value="Edit">
+    </form>
+    <div id="errors">	
+      <h3>{{error}}</h3>	
+    </div>
+  </div>

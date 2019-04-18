@@ -1,0 +1,8 @@
+<div id="component">
+  <h1>Add an Author</h1>
+  <form (submit)="addAuthor()">
+    {{newAuthor | json}} 
+    <input type="text" [(ngModel)]="newAuthor.name" name="newAuthor.name">
+    <input class="btn" type="submit" value="Submit">
+  </form>
+</div>

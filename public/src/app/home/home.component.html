@@ -1,0 +1,24 @@
+<div id="component">
+    <h1>Browse the Ledger</h1>
+    <h2>Here you can browse all Authors.</h2>
+    <table id="ledger">
+        <thead>
+        <tr id="grey">
+            <th>Author List</th>
+        </tr>
+        <tr>
+            <th>Author</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let author of _httpService.authors">
+                <td>{{author.name}}</td>
+                <td>
+                    <button [routerLink]="['/edit', author.id]">Edit</button>
+                    <button (click)='deleteAuthor(author.id)' >Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
