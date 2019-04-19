@@ -12,11 +12,11 @@
         </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let author of _httpService.authors">
+            <tr *ngFor="let author of authors">
                 <td>{{author.name}}</td>
                 <td>
-                    <button [routerLink]="['/edit', author.id]">Edit</button>
-                    <button (click)='deleteAuthor(author.id)' >Delete</button>
+                    <button [routerLink]="['/edit', author._id]">Edit</button>
+                    <button (click)='deleteAuthor(author._id)' >Delete</button>
                 </td>
             </tr>
         </tbody>

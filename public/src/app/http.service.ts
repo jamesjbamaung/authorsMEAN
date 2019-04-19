@@ -27,7 +27,9 @@ export class HttpService {
     return this._http.put(`/authors/${id}`, editAuthor);
   }
 
-  deleteAuthor(id:string){
-    return this._http.delete(`/delete/${id}`);
+  deleteAuthor(id){
+    console.log("id from service.ts")
+    console.log(id)
+    return this._http.delete('/delete/' + id);
   }
 }

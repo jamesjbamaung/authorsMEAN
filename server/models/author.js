@@ -4,6 +4,7 @@ const authorSchema = new mongoose.Schema({
     name: {
         type: String, 
         minlength:3,
+        unique:true
     },
     created_at: {
         type: Date,

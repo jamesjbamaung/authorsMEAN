@@ -7,19 +7,21 @@ import { HttpService } from './../http.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  authors = [];
+  
 
   constructor(private _httpService: HttpService) { }
 
   ngOnInit() {
     this.getAllAuthors();
   }
+  authors:any ;
 
   getAllAuthors(){
     let observable = this._httpService.getAllAuthors();
     observable.subscribe(data => { 
       console.log("~Loading All Authors~", data)
-      this.authors = data["author"]
+      this.authors = data["authors"]
+      console.log(this.authors)
     });
   }
 
